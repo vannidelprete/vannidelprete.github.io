@@ -10,5 +10,7 @@ if(hour >= 0 && hour <= 12){
     greet = 'Buona sera!';
 }
 
-document.write('<h2><b>' + greet + ' ' + 'Benvenuto nel sito di Giovanni Del Prete' + 
-        '</h2></b>');
+header = document.getElementById('greeting');
+
+header.innerHTML = '<h2><b>' + greet + ' ' + 'Benvenuto nel sito di Giovanni Del Prete' + 
+        '</h2></b>';
