@@ -17,5 +17,6 @@ $(function() {
             $lastChar.after('<li id = "converted">il codice ASCII di ' + inputForm.charAt(i) + ' &egrave : '
                 + inputForm.charCodeAt(i) + '</li>');   //e fornisci il codice ASCII di ognuno in una lista
         }
+        $inputChar.val('');                       //elimina ciò che c'è in input
     });
 });
