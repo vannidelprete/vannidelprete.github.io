@@ -58,19 +58,20 @@
         <h2><b>ASCII Application</b></h2>
         <h5><i>Breve spiegazione</i></h5>
         <p><h6>Questa piccolissima e semplice applicazione può servire a un programmatore per conoscere il codice
-        ASCII di un qualsiasi caratteri (può essere utile per il software che si sta creando). In realtà
-            l'ho creata per mettere in pratica l'uso di JavaScript come gestore di eventi.</h6></p>
+        ASCII di un qualsiasi carattere o di una frase (può essere utile per il software che si sta creando). In realtà
+            l'ho creata per mettere in pratica l'uso di JavaScript come gestore di eventi. Gli eventi vengono
+            gestiti grazie all'uso di selettori CSS di jQuery.</h6></p>
 
-        <h3>Inserisci il carattere di cui ti occorre il corrispondente codice ASCII</h3>
+        <h3>Forza, inserisci una frase e io ne farò codice ASCII</h3>
         <div class="container">
-        <div class="form-group">
-                <div class="col-xs-12 col-sm-4">
-                    <label for="character">Carattere:</label>
-                    <input class="form-control" rows="2" id="character" placeholder="Inserisci il carattere..." />
-                </div>
-        </div>
+            <form id="startConvert">
+                <input type="text" id="inputChar" placeholder="Inserisci una stringa..." />
+                <br />
+                <br />
+                <input type="submit" class="btn btn-success" value="Convert!" />
+            </form>
             <br />
-        <div id="reponse"></div>
+        <ul id="reponse"></ul>
         </div>
         </div>
     
