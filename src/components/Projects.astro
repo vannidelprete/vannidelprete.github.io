@@ -1,0 +1,51 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import type { Project } from '../types';
+
+const projects = (await import('../data/projects.json')).default as Project[];
+---
+
+<section id="projects">
+  <div class="projects-inner">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      {projects.map(project => (
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          tech={project.tech}
+          type={project.type}
+          github={project.github}
+          link={project.link}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .projects-inner {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+    gap: 1rem;
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+const links = [
+  { label: 'GitHub', href: 'https://github.com/vannidelprete' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/giovannidelprete' },
+  { label: 'Email', href: 'mailto:giovannidelprete95@gmail.com' },
+];
+---
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-name">Giovanni Del Prete</p>
+    <nav class="footer-links">
+      {links.map(link => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+      ))}
+    </nav>
+    <p class="footer-credit">Built with Astro & Tailwind CSS</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-inner {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-name {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: #fafafa;
+  }
+
+  .footer-credit {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #3f3f46;
+    margin: 0;
+  }
+</style>

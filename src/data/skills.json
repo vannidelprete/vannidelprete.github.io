@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "skills": ["TypeScript", "C++", "C", "C#", "Node.js", ".NET", "SQL", "Python"]
+    },
+    {
+      "name": "Embedded & Systems",
+      "skills": ["Embedded Linux", "Yocto Project", "Buildroot", "OCPP", "Modbus", "MQTT", "I2C", "UART", "SPI"]
+    },
+    {
+      "name": "Tools & Practices",
+      "skills": ["Git", "Scrum / Agile", "Linux", "SQLite", "MySQL"]
+    },
+    {
+      "name": "Languages",
+      "skills": ["Italian (native)", "English (B2)"]
+    }
+  ]
+}

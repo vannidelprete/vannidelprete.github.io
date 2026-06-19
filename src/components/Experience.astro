@@ -1,0 +1,174 @@
+---
+import type { Experience } from '../types';
+
+const experiences = (await import('../data/experience.json')).default as Experience[];
+---
+
+<section id="experience">
+  <div class="experience-inner">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      {experiences.map(exp => (
+        <div class="timeline-item">
+          <div class="timeline-dot" />
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="company">{exp.company}</h3>
+                <p class="role">{exp.role}</p>
+              </div>
+              <div class="meta">
+                <span class="period">{exp.period}</span>
+                <span class={`badge ${exp.type}`}>{exp.type}</span>
+              </div>
+            </div>
+            <p class="description">{exp.description}</p>
+            <ul class="skills">
+              {exp.skills.map(s => <li>{s}</li>)}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .experience-inner {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 1px solid var(--color-border);
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -1.875rem;
+    top: 0.3rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-background);
+  }
+
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .company {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fafafa;
+    margin: 0;
+  }
+
+  .role {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    margin: 0.2rem 0 0;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .period {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+
+  .badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge.full-time {
+    color: #6366f1;
+    border-color: #6366f140;
+    background-color: #6366f110;
+  }
+
+  .badge.part-time {
+    color: #fb923c;
+    border-color: #fb923c40;
+    background-color: #fb923c10;
+  }
+
+  .badge.internship {
+    color: #34d399;
+    border-color: #34d39940;
+    background-color: #34d39910;
+  }
+
+  .description {
+    font-size: 0.875rem;
+    color: #71717a;
+    line-height: 1.6;
+    margin: 0 0 0.75rem;
+  }
+
+  .skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skills li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+</style>

@@ -1,0 +1,23 @@
+[
+  {
+    "institution": "University of Bergamo",
+    "degree": "MSc in Computer Engineering",
+    "thesis": "Design and development of speed controller for positive yarn feeders",
+    "period": "2018 - 2025",
+    "grade": "107/110"
+  },
+  {
+    "institution": "University of Bergamo",
+    "degree": "BSc in Computer Engineering",
+    "thesis": "Clash Ninja: a VR-based videogame for amblyopia treatment",
+    "period": "2014 - 2018",
+    "grade": "90/110"
+  },
+  {
+    "institution": "ISS Ettore Majorana, Seriate",
+    "degree": "High School Diploma - Electronics & Telecommunications",
+    "thesis": null,
+    "period": "2009 - 2014",
+    "grade": "73/100"
+  }
+]

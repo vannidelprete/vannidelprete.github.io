@@ -1,0 +1,125 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tech: string[];
+  type: 'company' | 'personal';
+  github: string | null;
+  link: string | null;
+}
+
+const { title, description, tech, type, github, link } = Astro.props;
+---
+
+<article class="card">
+  <div class="card-header">
+    <span class={`badge ${type}`}>
+      {type === 'company' ? 'Company' : 'Personal'}
+    </span>
+    <div class="card-links">
+      {github && <a href={github} target="_blank" rel="noopener noreferrer">GitHub →</a>}
+      {link && <a href={link} target="_blank" rel="noopener noreferrer">Live →</a>}
+    </div>
+  </div>
+
+  <h3 class="card-title">{title}</h3>
+  <p class="card-description">{description}</p>
+
+  <ul class="card-tech">
+    {tech.map(t => <li>{t}</li>)}
+  </ul>
+</article>
+
+<style>
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    border: 1px solid;
+  }
+
+  .badge.company {
+    color: #fb923c;
+    border-color: #fb923c40;
+    background-color: #fb923c10;
+  }
+
+  .badge.personal {
+    color: #34d399;
+    border-color: #34d39940;
+    background-color: #34d39910;
+  }
+
+  .card-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .card-links a {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .card-links a:hover {
+    color: #fafafa;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fafafa;
+    margin: 0;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+    color: #71717a;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+  }
+
+  .card-tech {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .card-tech li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+</style>
