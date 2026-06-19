@@ -1,0 +1,15 @@
+[
+  {
+    "id": "advanced-embedded-linux",
+    "title": "Advanced Embedded Linux Development",
+    "issuer": "University of Colorado Boulder",
+    "platform": "Coursera",
+    "date": "Apr 2026",
+    "courses": [
+      "Linux System Programming and Introduction to Buildroot",
+      "Linux Kernel Programming and Introduction to Yocto Project",
+      "Linux Embedded System Topics and Projects"
+    ],
+    "url": "https://coursera.org/verify/specialization/IBJ1ORCN8V8P"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tmc",
+    "company": "TMC SPA",
+    "role": "Embedded Software Engineer",
+    "period": "Sep 2025 - present",
+    "type": "full-time",
+    "description": "Embedded software development for next-generation smart AC EV charging stations (EVSE). Working on an ARM-based SoC with a custom Linux distribution built with Yocto, structured as modular C++ applications communicating through an IPC message bus.",
+    "skills": ["C++17/20", "Yocto Project", "Buildroot", "Python", "SQLite", "Embedded Linux"]
+  },
+  {
+    "id": "topgraf",
+    "company": "Topgraf SRL - Scame SPA Group",
+    "role": "Software Engineer & Team Leader",
+    "period": "Jan 2022 - Sep 2025",
+    "type": "full-time",
+    "description": "Software consulting and development for third parties. Led the E-Mobility software development team at Scame SPA, managing complex EVSE projects including OCPP implementation, smart charging algorithms, and custom Linux distributions with Yocto.",
+    "skills": ["Node.js", "TypeScript", "C#", ".NET", "MySQL", "Yocto Project", "OCPP", "Team Leading", "Scrum"]
+  },
+  {
+    "id": "centax",
+    "company": "CX Centax SRL",
+    "role": "Customer Service Representative & Team Leader",
+    "period": "Sep 2014 - Dec 2021",
+    "type": "part-time",
+    "description": "Worked in the telecommunications sector alongside university studies. Handled customer service operations and took on Team Leader responsibilities from January 2021, managing team workflows and performance.",
+    "skills": ["Team leading", "Customer management", "Teamwork", "Back office", "CRM"]
+  },
+  {
+    "id": "gewiss",
+    "company": "Gewiss SPA",
+    "role": "Quality Control Trainee",
+    "period": "Mar - Apr 2014",
+    "type": "internship",
+    "description": "Academic internship in the quality control laboratory. Testing of electrical devices for regulatory compliance.",
+    "skills": ["Quality testing", "Electronics", "CEI/CENELEC"]
+  }
+]

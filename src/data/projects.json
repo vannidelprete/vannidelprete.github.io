@@ -1,0 +1,65 @@
+[
+  {
+    "id": "evse-embedded",
+    "title": "Embedded EVSE Platform",
+    "description": "Embedded software platform for smart AC EV charging stations. ARM-based SoC with custom Linux (Yocto), modular C++ applications via IPC message bus. Includes OCPP protocol, cybersecurity (HSM, secure boot), and smart charging algorithms.",
+    "tech": ["C++17/20", "Yocto Project", "Buildroot", "Python", "SQLite", "OCPP"],
+    "type": "company",
+    "github": null,
+    "link": null
+  },
+  {
+    "id": "evse-infrastructure",
+    "title": "EVSE Infrastructure",
+    "description": "Full software architecture for Linux-based EV charging stations. OCPP 1.6 implementation, smart charging algorithms, power management, cybersecurity layer, and custom Yocto Linux distribution.",
+    "tech": ["Node.js", "TypeScript", "Yocto Project", "OCPP", "WebSocket", "TLS"],
+    "type": "company",
+    "github": null,
+    "link": null
+  },
+  {
+    "id": "embedded-linux-capstone",
+    "title": "Advanced Embedded Linux Capstone",
+    "description": "Capstone project for the Advanced Embedded Linux Development specialization (University of Colorado Boulder). Custom embedded root filesystem and Linux distribution using Yocto/Buildroot, plus WiFi video streaming implementation over an embedded Linux platform.",
+    "tech": ["Yocto Project", "Buildroot", "BitBake", "Embedded Linux", "WiFi", "Video Streaming"],
+    "type": "personal",
+    "github": "https://github.com/vannidelprete/final-project-vannidelprete",
+    "link": null
+  },
+  {
+    "id": "pharma-iot",
+    "title": "Pharmaceutical IoT Monitoring System",
+    "description": "IoT solution for pharmaceutical cold chain tracking and temperature monitoring. Real-time web dashboard integrated with 25+ hospital facilities, ensuring drug transport compliance.",
+    "tech": [".NET", "C#", "MySQL"],
+    "type": "company",
+    "github": null,
+    "link": null
+  },
+  {
+    "id": "transformer-testing",
+    "title": "Voltage Transformer Testing Automation",
+    "description": "Automated testing system for voltage transformer quality control. WinForms application with Modbus PLC communication and tester device API integration.",
+    "tech": [".NET", "C#", "MySQL", "Modbus", "WinForms"],
+    "type": "company",
+    "github": null,
+    "link": null
+  },
+  {
+    "id": "clash-ninja",
+    "title": "Clash Ninja",
+    "description": "VR-based videogame developed as Bachelor thesis for the 3D4Amb project, aimed at treating amblyopia (lazy eye) through immersive gameplay.",
+    "tech": ["Unity 3D", "C#", "VR"],
+    "type": "personal",
+    "github": "https://github.com/vannidelprete/ClashNinja-completed-",
+    "link": null
+  },
+  {
+    "id": "brain-tumor-ml",
+    "title": "Brain Tumor Classification",
+    "description": "Machine learning models for brain tumor recognition from CT scan images, built for educational purposes.",
+    "tech": ["Python", "Machine Learning"],
+    "type": "personal",
+    "github": "https://github.com/vannidelprete/Brain-Tumor-Classification-Models",
+    "link": null
+  }
+]

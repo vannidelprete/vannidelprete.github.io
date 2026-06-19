@@ -1,0 +1,82 @@
+---
+import type { SkillsData } from '../types';
+
+const { categories } = (await import('../data/skills.json')).default as SkillsData;
+---
+
+<section id="skills">
+  <div class="skills-inner">
+    <h2 class="section-title">Skills</h2>
+    <div class="categories">
+      {categories.map(cat => (
+        <div class="category">
+          <h3 class="category-name">{cat.name}</h3>
+          <ul class="skill-list">
+            {cat.skills.map(skill => (
+              <li class="skill-badge">{skill}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .skills-inner {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    gap: 2rem;
+  }
+
+  .category-name {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fafafa;
+    margin: 0 0 1rem;
+  }
+
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-badge {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .skill-badge:hover {
+    color: #fafafa;
+    border-color: var(--color-muted);
+  }
+</style>
