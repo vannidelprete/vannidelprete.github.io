@@ -8,6 +8,7 @@ export interface Project {
   description: string;
   tech: string[];
   type: 'company' | 'personal';
+  status?: 'in-development';
   github: string | null;
   link: string | null;
 }

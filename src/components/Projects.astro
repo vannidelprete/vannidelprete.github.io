@@ -15,6 +15,7 @@ const projects = (await import('../data/projects.json')).default as Project[];
           description={project.description}
           tech={project.tech}
           type={project.type}
+          status={project.status}
           github={project.github}
           link={project.link}
         />
