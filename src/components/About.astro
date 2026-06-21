@@ -1,4 +1,7 @@
 ---
+import type { About } from '../types';
+
+const { bio } = (await import('../data/about.json')).default as About;
 ---
 
 <section id="about">
@@ -6,21 +9,9 @@
     <h2 class="section-title">About me</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>
-          I'm a software engineer based in Bergamo, Italy, specialized in embedded systems and E-Mobility software.
-          I hold a Master's degree in Computer Engineering from the University of Bergamo and have been
-          working in the industry since 2022.
-        </p>
-        <p>
-          My core expertise is in <strong>Embedded Linux</strong> - from writing C++ applications to building
-          custom Linux distributions with Yocto and Buildroot. I've led teams developing software for
-          electric vehicle charging stations (EVSE), working across the full stack from hardware abstraction
-          to OCPP cloud communication.
-        </p>
-        <p>
-          I enjoy tackling complex technical challenges and find satisfaction in building reliable,
-          well-structured systems.
-        </p>
+        {bio.map(paragraph => (
+          <p>{paragraph}</p>
+        ))}
       </div>
     </div>
   </div>
@@ -47,7 +38,6 @@
   }
 
   .about-text {
-    max-width: 42rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
