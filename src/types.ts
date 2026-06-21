@@ -1,3 +1,7 @@
+export interface About {
+  bio: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
