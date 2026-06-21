@@ -1,5 +1,15 @@
 [
   {
+    "id": "vigilo",
+    "title": "Vigilo",
+    "description": "Open source edge AI predictive maintenance platform for rotating machines. The full pipeline runs on the local network: vibration data acquisition via ESP32, anomaly detection on a Raspberry Pi 4 with custom Yocto Linux, real-time Grafana dashboard. No cloud, no subscription.",
+    "tech": ["C/C++", "ESP32", "MQTT", "Yocto Linux", "Python", "InfluxDB", "Grafana", "Docker", "TensorFlow Lite"],
+    "type": "personal",
+    "status": "in-development",
+    "github": "https://github.com/vannidelprete/vigilo",
+    "link": null
+  },
+  {
     "id": "evse-embedded",
     "title": "Embedded EVSE Platform",
     "description": "Embedded software platform for smart AC EV charging stations. ARM-based SoC with custom Linux (Yocto), modular C++ applications via IPC message bus. Includes OCPP protocol, cybersecurity (HSM, secure boot), and smart charging algorithms.",

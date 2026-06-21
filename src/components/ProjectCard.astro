@@ -4,18 +4,24 @@ interface Props {
   description: string;
   tech: string[];
   type: 'company' | 'personal';
+  status?: 'in-development';
   github: string | null;
   link: string | null;
 }
 
-const { title, description, tech, type, github, link } = Astro.props;
+const { title, description, tech, type, status, github, link } = Astro.props;
 ---
 
 <article class="card">
   <div class="card-header">
-    <span class={`badge ${type}`}>
-      {type === 'company' ? 'Company' : 'Personal'}
-    </span>
+    <div class="card-badges">
+      <span class={`badge ${type}`}>
+        {type === 'company' ? 'Company' : 'Personal'}
+      </span>
+      {status === 'in-development' && (
+        <span class="badge in-development">In development</span>
+      )}
+    </div>
     <div class="card-links">
       {github && <a href={github} target="_blank" rel="noopener noreferrer">GitHub →</a>}
       {link && <a href={link} target="_blank" rel="noopener noreferrer">Live →</a>}
@@ -122,4 +128,16 @@ const { title, description, tech, type, github, link } = Astro.props;
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
   }
+
+  .card-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.badge.in-development {
+  color: #facc15;
+  border-color: #facc1540;
+  background-color: #facc1510;
+}
 </style>
